@@ -1,0 +1,7 @@
+{
+  "name": "angular-google-maps",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
