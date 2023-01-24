@@ -1,0 +1,23 @@
+<ion-header>
+  <ion-toolbar>
+    <ion-title>Add Map</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div *ngIf="center && apiLoaded | async">
+    <google-map
+      width="auto"
+      height="600px"
+      [center]="center"
+      [options]="options"
+      (mapClick)="addMarker($event)"
+    >
+      <map-marker
+        [options]="markerOptions"
+        [position]="markerPosition"
+        *ngFor="let markerPosition of markerPositions"
+      ></map-marker>
+    </google-map>
+  </div>
+</ion-content>
